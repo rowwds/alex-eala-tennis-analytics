@@ -28,7 +28,6 @@ The clean dataset (`alex_eala_career_matches.csv`) stores career match entries w
 * `tournament` (VARCHAR): Event name
 * `surface` (VARCHAR): Court surface (`Hard`, `Clay`, `Grass`)
 * `round` (VARCHAR): Tournament round (`R128`, `R64`, `QF`, `SF`, `F`)
-* `opponent` (VARCHAR): Opponent name
 * `result` (VARCHAR): Match outcome (`W` / `L`)
 * `score` (VARCHAR): Full set score string
 
