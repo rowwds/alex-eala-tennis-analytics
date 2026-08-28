@@ -6,9 +6,10 @@ An end-to-end data analytics project evaluating professional tennis performance 
 
 ## 📌 Project Overview
 * **Objective:** Analyze career match data to determine performance drivers across surface types, tournament levels (ITF W25/W100 vs. WTA 250/500/1000/Grand Slams), and first-set momentum outcomes.
+* **Data Source:** [Tennis Abstract](https://www.tennisabstract.com/) (Career match-by-match results, scores, surfaces, and tournament tiers)
 * **Tech Stack:** 
-  * **Data Wrangling:** Excel (CSV, Power Query, calculated fields)
-  * **Database & Querying:** MySQL Workbench (Multi-table joins, aggregations, window functions)
+  * **Data Cleaning & Extraction:** Excel (HTML table ingestion, text manipulation formulas, calculated outcome fields)
+  * **Database & Querying:** MySQL Workbench (Relational schema design, aggregations, window functions)
   * **Visualization:** Tableau Public (Interactive sports performance dashboard)
   * **Documentation:** GitHub
 
@@ -22,15 +23,19 @@ An end-to-end data analytics project evaluating professional tennis performance 
 ---
 
 ## 📂 Data Architecture
-The dataset is structured across relational tables containing match logs:
-* `matches`: `match_id`, `date`, `tournament_id`, `surface`, `round`, `opponent_id`, `result` (W/L), `score`
-* `tournaments`: `tournament_id`, `name`, `tier` (ITF W25, WTA 250, WTA 500, Grand Slam), `location`
-* `opponents`: `opponent_id`, `name`, `rank_at_time_of_match`, `country`
+The clean dataset (`alex_eala_career_matches.csv`) stores career match entries with the following schema:
+* `match_date` (DATE): Date of the match (`YYYY-MM-DD`)
+* `tournament` (VARCHAR): Event name
+* `surface` (VARCHAR): Court surface (`Hard`, `Clay`, `Grass`)
+* `round` (VARCHAR): Tournament round (`R128`, `R64`, `QF`, `SF`, `F`)
+* `opponent` (VARCHAR): Opponent name
+* `result` (VARCHAR): Match outcome (`W` / `L`)
+* `score` (VARCHAR): Full set score string
 
 ---
 
 ## 🗺️ Project Roadmap
-* [x] **Day 1:** Project scope definition, core questions, and repository setup.
-* [ ] **Day 2:** Data cleaning, table normalization, and CSV preparation.
-* [ ] **Day 3:** MySQL schema design, data import, and script development.
-* [ ] **Day 4:** Building and publishing the interactive Tableau Dashboard.
+* [x] **Day 1:** Project scope definition, core analytical questions, and repository setup.
+* [x] **Day 2:** Data extraction from Tennis Abstract, column cleaning, and Excel transformations.
+* [ ] **Day 3:** MySQL database schema modeling, CSV table import, and SQL script development.
+* [ ] **Day 4:** Building and publishing the interactive Tableau performance dashboard.
