@@ -36,5 +36,5 @@ The clean dataset (`alex_eala_career_matches.csv`) stores career match entries w
 ## 🗺️ Project Roadmap
 * [x] **Day 1:** Project scope definition, core analytical questions, and repository setup.
 * [x] **Day 2:** Data extraction from Tennis Abstract, column cleaning, and Excel transformations.
-* [ ] **Day 3:** MySQL database schema modeling, CSV table import, and SQL script development.
+* [x] **Day 3:** MySQL database schema modeling, CSV table import, and SQL script development.
 * [ ] **Day 4:** Building and publishing the interactive Tableau performance dashboard.
